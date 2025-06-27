@@ -21,23 +21,7 @@
 
 ---
 
-## Screenshots
 
-Place your screenshots in the `screenshots/` folder and update paths as needed.
-
-| Homepage | Upload Image | Classification Result |
-|---------|---------------|------------------------|
-| ![Homepage](./screenshots/homepage.png) | ![Upload](./screenshots/image-upload.png) | ![Result](./screenshots/classification-result.png) |
-
-| Shop | Cart & Checkout | Admin Panel |
-|------|------------------|--------------|
-| ![Shop](./screenshots/shop.png) | ![Cart](./screenshots/cart-checkout.png) | ![Admin](./screenshots/admin-panel.png) |
-
-| Database ERD |
-|------------------|
-| ![DB](./screenshots/Screenshot 2025-06-04 195817.png) |
-
----
 
 ## Demo
 
@@ -49,7 +33,7 @@ Watch a complete walkthrough of the project:
 ## Technologies Used
 
 - **Frontend:** HTML, CSS, JavaScript, Bootstrap  
-- **Backend:** ASP.NET Core Web API (.NET ), Entity Framework Core, MySQL, ASP.NET Identity  
+- **Backend:** ASP.NET Core Web API (.NET ), Entity Framework Core, SQL Server, ASP.NET Identity  
 - **AI Component:** Python, FastAPI, OpenCV, YOLOv11x (used internally for classification)
 
 ---

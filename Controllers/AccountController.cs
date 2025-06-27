@@ -21,7 +21,7 @@ namespace Smart_Flower_Shop.Controllers
         private readonly UserManager<ApplicationUser> userManager;
         private readonly IConfiguration config;
 
-        // عملتها علشان ياخد بيانات من الاببستنج    
+       
         public AccountController(UserManager<ApplicationUser> userManager, IConfiguration config)
         {
             this.userManager = userManager;

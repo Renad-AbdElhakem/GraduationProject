@@ -44,7 +44,7 @@ namespace Smart_Flower_Shop.Controllers
                 return BadRequest("Invalid category data.");
             }
 
-            // تحويل DTO إلى كائن Category الفعلي قبل الإضافة إلى قاعدة البيانات
+          
             var newCategory = new Category
             {
                 Name = category.Name
@@ -53,10 +53,10 @@ namespace Smart_Flower_Shop.Controllers
             _context.Categories.Add(newCategory);
             await _context.SaveChangesAsync();
 
-            // تحويل الكاتجوري المضاف إلى DTO قبل الإرجاع
+        
             var categoryDto = new CategoryDTO
             {
-                Id = newCategory.CategoryId, // استخدم الـ ID بعد الحفظ
+                Id = newCategory.CategoryId, 
                 Name = newCategory.Name
             };
 
@@ -78,13 +78,13 @@ namespace Smart_Flower_Shop.Controllers
                 return NotFound("Category not found.");
             }
 
-            // تحديث البيانات
+           
             category.Name = categoryDto.Name;
 
             _context.Categories.Update(category);
             await _context.SaveChangesAsync();
 
-            // إرجاع البيانات المحدثة كـ DTO
+          
             return Ok(new CategoryDTO
             {
                 Id = category.CategoryId,

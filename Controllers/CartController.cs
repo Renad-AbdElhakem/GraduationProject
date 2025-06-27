@@ -30,7 +30,7 @@ namespace Smart_Flower_Shop.Controllers
             if (userId == null)
                 return Unauthorized(new { message = "User Not Authorized" });
 
-            // التحقق مما إذا كان للمستخدم سلة
+           
             var cart = _db.Cart
                 .Include(c => c.CartItems)
                 .FirstOrDefault(c => c.UserId == userId);
@@ -45,7 +45,6 @@ namespace Smart_Flower_Shop.Controllers
                 _db.Cart.Add(cart);
             }
 
-            // التحقق مما إذا كان المنتج موجودًا بالفعل في السلة
             var cartItem = cart.CartItems.FirstOrDefault(ci => ci.ProductId == id);
 
             if (cartItem != null)
@@ -129,17 +128,17 @@ namespace Smart_Flower_Shop.Controllers
             if (cartItem == null)
                 return NotFound(new { message = "Product not found in cart" });
 
-            // تقليل الكمية بمقدار 1
+         
             cartItem.Quantity -= 1;
 
             if (cartItem.Quantity <= 0)
             {
-                // لو الكمية وصلت 0 → نحذف المنتج بالكامل
+            
                 cart.CartItems.Remove(cartItem);
             }
             else
             {
-                // تحديث السعر بناءً على الكمية الجديدة
+
                 var product = _db.Products.Find(id);
                 cartItem.Price = cartItem.Quantity * product.Price;
             }

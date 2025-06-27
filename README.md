@@ -35,7 +35,7 @@ Place your screenshots in the `screenshots/` folder and update paths as needed.
 
 | Database ERD |
 |------------------|
-| ![DB](./screenshots/database-schema.png) |
+| ![DB](./screenshots/Screenshot 2025-06-04 195817.png) |
 
 ---
 
